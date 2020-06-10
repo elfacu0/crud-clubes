@@ -1,9 +1,15 @@
 <div class="container">
     <div class="wrapper">
         <div class="team-crest">
-            <img src="{{data.team.crestUrl}}" />
+            {{#if data.team.name}}
+                <img src="{{data.team.crestUrl}}" />
+            {{else}}
+                <img src="https://image.flaticon.com/icons/svg/16/16410.svg"/>
+            {{/if}}
         </div>
-        {{>addCrest id=data.id}}
+         {{#if data.team.name}}
+            {{>addCrest id=data.id}}
+        {{/if}}
         <h1> Team name : {{data.team.name}}</h1>
         {{>editTeamForm items=data.team}}
     </div>

@@ -2,7 +2,6 @@ const fs = require('fs');
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-const bodyParser = require('body-parser');
 
 // const upload = multer({ dest: './public/uploads/images' });
 const upload = multer({ dest: './public/uploads/images' });
@@ -21,10 +20,10 @@ app.set('view engine', 'handlebars');
 // https://expressjs.com/en/starter/static-files.html
 // app.use(express.static(`${__dirname}/uploads`));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
 
-// parse application/json
-app.use(bodyParser.json());
+// // for parsing application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + '/public'));
 
@@ -55,7 +54,9 @@ app.get('/team/add', (req, res) => {
         layout: 'main',
         title: 'Add Team',
         data: {
-            id: 0,
+            team: {
+                id: 'new',
+            },
         },
     });
 });
@@ -102,6 +103,8 @@ app.get('/team/:id/edit', (req, res) => {
 app.post('/team/:id/edit', (req, res) => {
     const teams = JSON.parse(fs.readFileSync('./data/equipos.json'));
     const team = selectTeam(teams, req.params.id, false);
+    console.log('AAAA');
+    console.log(req.body);
     modifyTeam(req.body, req.params.id);
     res.redirect('/');
 });
@@ -109,6 +112,7 @@ app.post('/team/:id/edit', (req, res) => {
 function modifyTeam(changes, id) {
     const teams = JSON.parse(fs.readFileSync('./data/equipos.json'));
     const index = selectTeam(teams, id, true);
+    changes.area = { id: '2070', name: changes.area };
     if (id !== 'new') {
         for (let [key, value] of Object.entries(changes)) {
             teams[index][key] = value;
@@ -118,6 +122,7 @@ function modifyTeam(changes, id) {
         for (let [key, value] of Object.entries(changes)) {
             team[key] = value;
         }
+        team.id = teams.length;
         teams.push(team);
     }
     fs.writeFileSync('./data/equipos.json', JSON.stringify(teams, null, 4));
@@ -133,8 +138,7 @@ app.post('/upload/:id', upload.single('image'), (req, res) => {
     }
     const fileName = file.destination.slice(8) + '/' + file.filename;
     changeCrest(fileName, req.params.id);
-    res.send('upload successful');
-    res.redirect('/');
+    res.redirect(`/`);
 });
 
 function changeCrest(filePath, id) {

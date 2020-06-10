@@ -2,18 +2,18 @@
     {
         "id": 73,
         "area": {
-            "id": 2072,
-            "name": "England"
+            "id": "2070",
+            "name": "Argentina"
         },
         "name": "Tottenham Hotspur FC",
         "shortName": "Tottenham",
         "tla": "TOT",
-        "crestUrl": "/uploads/images/b53a2086a40ed1625ff47b0ff1e4a801",
+        "crestUrl": "/uploads/images/c906c1e53a5098d94c16d11740ecc470",
         "address": "Bill Nicholson Way, 748 High Road London N17 OAP",
         "phone": "+44 (0844) 4995000",
         "website": "http://www.tottenhamhotspur.com",
         "email": "customer.care@tottenhamhotspur.com",
-        "founded": "8888",
+        "founded": "66",
         "clubColors": "Navy Blue / White",
         "venue": "Tottenham Hotspur Stadium",
         "lastUpdated": "2020-05-14T02:42:01Z",

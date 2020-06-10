@@ -1,10 +1,16 @@
-<form class="bg" action="/team/{{items.id}}/edit" method="POST" >
+<form class="bg center" action="/team/{{items.id}}/edit" method="POST">
     <table>
         <tr>
             <th>Name:</th>
             <th>
                 <input class="input-form" type="text" name="name" value="{{items.name}}" required/> 
             </th>
+        </tr> 
+        <tr>
+            <th>Country: </th>
+            <td>
+                <input class="input-form" type="text" name="area" value="{{items.area.name}}"/> 
+            </td>
         </tr> 
         <tr>
             <th>Address: </th>
