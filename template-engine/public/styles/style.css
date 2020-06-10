@@ -1,0 +1,113 @@
+body {
+    background: #f2f3f3;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.teams-header {
+    padding: 10px 0px;
+    width: 100%;
+    display: flex;
+}
+
+.teams-header p {
+    margin: 0px;
+    font-size: 30px;
+    padding-right: 10%;
+}
+
+button {
+    border: 2px solid #84a71c;
+    border-radius: 5px;
+    min-width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+button:hover {
+    background: #84a71c;
+    cursor: pointer;
+}
+
+.crest-preview {
+    max-height: 100px;
+}
+
+.name-preview {
+    display: flex;
+    align-items: center;
+}
+
+.name-preview * {
+    margin-left: 5%;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.actions-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.actions-container a:hover {
+    color: #4a972a;
+    transform: scale(1.2);
+    transition: all 0.2s;
+}
+
+.wrapper {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-crest img {
+    max-width: 200px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+tr {
+    font-size: 18px;
+    height: 100px;
+    background: #84a71c;
+}
+td,
+th {
+    border: 1px solid #dddddd;
+    padding: 4px;
+}
+
+tr:nth-child(even) {
+    background-color: #d0d0d0;
+    color: black;
+}
+
+.input-form {
+    width: 80%;
+    height: 80%;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+}

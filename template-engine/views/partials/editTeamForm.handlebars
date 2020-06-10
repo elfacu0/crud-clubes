@@ -1,0 +1,55 @@
+<form class="bg" action="/team/{{items.id}}/edit" method="POST" >
+    <table>
+        <tr>
+            <th>Name:</th>
+            <th>
+                <input class="input-form" type="text" name="name" value="{{items.name}}" required/> 
+            </th>
+        </tr> 
+        <tr>
+            <th>Address: </th>
+            <td>
+                <input class="input-form" type="text" name="address" value="{{items.address}}"/> 
+            </td>
+        </tr> 
+        <tr>
+            <th>Phone: </th>
+            <td>
+                <input class="input-form" type="text" name="phone" value="{{items.phone}}"/> 
+            </td>
+        </tr> 
+        <tr>
+            <th>Website: </th>
+            <td>
+                <input class="input-form" type="text" name="website" value="{{items.website}}"/> 
+            </td>
+        </tr> 
+        <tr>
+            <th>Email: </th>
+            <td>
+                <input class="input-form" type="text" name="email" value="{{items.email}}"/> 
+            </td>
+        </tr> 
+        <tr>
+            <th>Founded: </th>
+            <td>
+                <input class="input-form" type="text" name="founded" value="{{items.founded}}"/> 
+            </td>
+        </tr> 
+        <tr>
+            <th>Club Colors: </th>
+            <td>
+                <input class="input-form" type="text" name="clubColors" value="{{items.clubColors}}"/> 
+            </td>
+        </tr> <tr>
+            <th>Venue: </th>
+            <td>
+                <input class="input-form" type="text" name="    venue" value="{{items.venue}}"/> 
+            </td>
+        </tr> 
+    </table>
+    <div class="buttons-container">
+        <button type="submit">Save</button>
+        <button type="button" onclick="window.location='/team/{{items.id}}/delete'">Delete</button>
+    </div>
+</form>

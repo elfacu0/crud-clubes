@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="teams-header">
+            <p>Teams : {{teams.length}}</p>
+            <button onclick="window.location='team/add'">Add</button>
+        </div>
+        <table>
+            <tr>
+                <th>Team Name</th>
+                <th>Country</th>
+                <th>Action</th>
+            </tr>
+            {{#each teams as |team|}}
+                <tr>
+                    <td>
+                        <div class="name-preview">
+                            <img class="crest-preview" src="{{team.crestUrl}}"/>
+                            <span>{{team.name}}</span>
+                        </div>
+                    </td>
+                    <td>{{team.area.name}}</td>
+                    <td>
+                        <div class="actions-container">
+                            <a href="/team/{{team.id}}/view">View</a>
+                            <a href="/team/{{team.id}}/edit">Edit</a>
+                            <a href="/team/{{team.id}}/delete">Delete</a> 
+                        </div>
+                    </td>
+                </tr>  
+            {{/each}}
+        </table>
+    </div>
+</div>

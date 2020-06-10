@@ -1,0 +1,175 @@
+[
+    {
+        "id": 73,
+        "area": {
+            "id": 2072,
+            "name": "England"
+        },
+        "name": "Tottenham Hotspur FC",
+        "shortName": "Tottenham",
+        "tla": "TOT",
+        "crestUrl": "/uploads/images/b53a2086a40ed1625ff47b0ff1e4a801",
+        "address": "Bill Nicholson Way, 748 High Road London N17 OAP",
+        "phone": "+44 (0844) 4995000",
+        "website": "http://www.tottenhamhotspur.com",
+        "email": "customer.care@tottenhamhotspur.com",
+        "founded": "8888",
+        "clubColors": "Navy Blue / White",
+        "venue": "Tottenham Hotspur Stadium",
+        "lastUpdated": "2020-05-14T02:42:01Z",
+        "    venue": "Tottenham Hotspur Stadium"
+    },
+    {
+        "id": 338,
+        "area": {
+            "id": 2072,
+            "name": "England"
+        },
+        "name": "Leicester City FC",
+        "shortName": "Leicester City",
+        "tla": "LEI",
+        "crestUrl": "https://upload.wikimedia.org/wikipedia/en/2/2d/Leicester_City_crest.svg",
+        "address": "The Walkers Stadium, Filbert Way Leicester LE2 7FL",
+        "phone": "+44 (0844) 8156000",
+        "website": "http://www.lcfc.com",
+        "email": "",
+        "founded": "9999",
+        "clubColors": "Royal Blue / White",
+        "venue": "King Power Stadium",
+        "lastUpdated": "2020-05-14T02:42:16Z",
+        "    venue": "King Power Stadium"
+    },
+    {
+        "id": 340,
+        "area": {
+            "id": 2072,
+            "name": "England"
+        },
+        "name": "Southampton FC",
+        "shortName": "Southampton",
+        "tla": "SOU",
+        "crestUrl": "https://upload.wikimedia.org/wikipedia/en/c/c9/FC_Southampton.svg",
+        "address": "Britannia Road Southampton SO14 5FP",
+        "phone": null,
+        "website": "http://www.saintsfc.co.uk",
+        "email": "sfc@saintsfc.co.uk",
+        "founded": 1885,
+        "clubColors": "Red / White / Black",
+        "venue": "St. Mary's Stadium",
+        "lastUpdated": "2020-05-14T02:42:17Z"
+    },
+    {
+        "id": 346,
+        "area": {
+            "id": 2072,
+            "name": "England"
+        },
+        "name": "Watford FC",
+        "shortName": "Watford",
+        "tla": "WAT",
+        "crestUrl": "https://upload.wikimedia.org/wikipedia/en/e/e2/Watford.svg",
+        "address": "Vicarage Road Watford WD18 0ER",
+        "phone": null,
+        "website": "http://www.watfordfc.com",
+        "email": "yourvoice@watfordfc.com",
+        "founded": 1881,
+        "clubColors": "Yellow / Black",
+        "venue": "Vicarage Road Stadium",
+        "lastUpdated": "2020-05-14T02:42:25Z"
+    },
+    {
+        "id": 354,
+        "area": {
+            "id": 2072,
+            "name": "England"
+        },
+        "name": "Crystal Palace FC",
+        "shortName": "Crystal Palace",
+        "tla": "CRY",
+        "crestUrl": "https://upload.wikimedia.org/wikipedia/en/0/0c/Crystal_Palace_FC_logo.svg",
+        "address": "Whitehorse Lane London SE25 6PU",
+        "phone": "+44 (020) 87686000",
+        "website": "http://www.cpfc.co.uk",
+        "email": "info@cpfc.co.uk",
+        "founded": 1905,
+        "clubColors": "Red / Blue",
+        "venue": "Selhurst Park",
+        "lastUpdated": "2020-05-14T02:42:33Z"
+    },
+    {
+        "id": 356,
+        "area": {
+            "id": 2072,
+            "name": "England"
+        },
+        "name": "Sheffield United FC",
+        "shortName": "Sheffield Utd",
+        "tla": "SHE",
+        "crestUrl": "https://upload.wikimedia.org/wikipedia/en/9/9c/Sheffield_United_FC_logo.svg",
+        "address": "Bramall Lane Sheffield, Yorkshire S2 4SU",
+        "phone": "+44 (0871) 9951899",
+        "website": "http://www.sufc.co.uk",
+        "email": "info@sufc.co.uk",
+        "founded": null,
+        "clubColors": "Red / White / Black",
+        "venue": "Bramall Lane",
+        "lastUpdated": "2020-05-14T02:42:36Z"
+    },
+    {
+        "id": 397,
+        "area": {
+            "id": 2072,
+            "name": "England"
+        },
+        "name": "Brighton & Hove Albion FC",
+        "shortName": "Brighton Hove",
+        "tla": "BHA",
+        "crestUrl": "https://upload.wikimedia.org/wikipedia/en/f/fd/Brighton_%26_Hove_Albion_logo.svg",
+        "address": "44 North Road Brighton & Hove BN1 1YR",
+        "phone": "+44 (01273) 878288",
+        "website": "http://www.seagulls.co.uk",
+        "email": "seagulls@bhafc.co.uk",
+        "founded": 1898,
+        "clubColors": "Blue / White",
+        "venue": "The American Express Community Stadium",
+        "lastUpdated": "2020-05-14T02:43:01Z"
+    },
+    {
+        "id": 563,
+        "area": {
+            "id": 2072,
+            "name": "England"
+        },
+        "name": "West Ham United FC",
+        "shortName": "West Ham",
+        "tla": "WHU",
+        "crestUrl": "https://upload.wikimedia.org/wikipedia/en/c/c2/West_Ham_United_FC_logo.svg",
+        "address": "Green Street, Upton Park London E13 9AZ",
+        "phone": "+44 (020) 85482794",
+        "website": "http://www.whufc.com",
+        "email": "yourcomments@westhamunited.co.uk",
+        "founded": 1895,
+        "clubColors": "Claret / Sky Blue",
+        "venue": "London Stadium",
+        "lastUpdated": "2020-05-14T02:43:12Z"
+    },
+    {
+        "id": 1044,
+        "area": {
+            "id": 2072,
+            "name": "England"
+        },
+        "name": "AFC Bournemouth",
+        "shortName": "Bournemouth",
+        "tla": "BOU",
+        "crestUrl": "https://upload.wikimedia.org/wikipedia/en/e/e5/AFC_Bournemouth_%282013%29.svg",
+        "address": "Dean Court, Kings Park Bournemouth BH7 7AF",
+        "phone": "+44 (01202) 726300",
+        "website": "http://www.afcb.co.uk",
+        "email": "admin@afcb.co.uk",
+        "founded": 1890,
+        "clubColors": "Red / Black",
+        "venue": "Vitality Stadium",
+        "lastUpdated": "2020-05-14T02:43:14Z"
+    }
+]

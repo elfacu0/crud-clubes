@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="team-crest">
+            <img src="{{data.team.crestUrl}}" />
+        </div>
+        {{>addCrest id=data.id}}
+        <h1> Team name : {{data.team.name}}</h1>
+        {{>editTeamForm items=data.team}}
+    </div>
+</div>
