@@ -2,6 +2,9 @@ const fs = require('fs');
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
+const axios = require('axios');
+
+require('dotenv/config');
 
 // const upload = multer({ dest: './public/uploads/images' });
 const upload = multer({ dest: './public/uploads/images' });
@@ -64,11 +67,15 @@ app.get('/team/add', (req, res) => {
 app.get('/team/:id/view', (req, res) => {
     const teams = JSON.parse(fs.readFileSync('./data/equipos.json'));
     const team = selectTeam(teams, req.params.id, false);
-    console.log(team);
-    res.render('team', {
-        layout: 'main',
-        title: team.name,
-        data: { id: req.params.id, team },
+    const coordinates = getCoordinates(team.address);
+    coordinates.then((data) => {
+        getMap(data.lat, data.lon).then((mapSrc) => {
+            res.render('team', {
+                layout: 'main',
+                title: team.name,
+                data: { id: req.params.id, team, mapSrc },
+            });
+        });
     });
 });
 
@@ -103,8 +110,6 @@ app.get('/team/:id/edit', (req, res) => {
 app.post('/team/:id/edit', (req, res) => {
     const teams = JSON.parse(fs.readFileSync('./data/equipos.json'));
     const team = selectTeam(teams, req.params.id, false);
-    console.log('AAAA');
-    console.log(req.body);
     modifyTeam(req.body, req.params.id);
     res.redirect('/');
 });
@@ -152,6 +157,31 @@ function deleteTeam(id) {
     let teams = JSON.parse(fs.readFileSync('./data/equipos.json'));
     teams = teams.filter((e) => e.id != id);
     fs.writeFileSync('./data/equipos.json', JSON.stringify(teams, null, 4));
+}
+
+function getCoordinates(street) {
+    street = encodeURI(street);
+    const URL = `https://eu1.locationiq.com/v1/search.php?key=${process.env.LOCATIONIQ_API}&q=${street}&format=json`;
+    let coordinates = {};
+    return axios
+        .get(URL)
+        .then((response) => response.data[0])
+        .catch((error) => {
+            console.log(error);
+        });
+}
+
+function getMap(lat, lon) {
+    const size = 300;
+    const URL = `https://maps.locationiq.com/v2/staticmap?key=${process.env.LOCATIONIQ_API}&center=${lat},${lon}&zoom=15&size=${size}x${size}&markers=${lat},${lon}`;
+    return axios
+        .get(URL, { responseType: 'arraybuffer' })
+        .then((response) =>
+            Buffer.from(response.data, 'binary').toString('base64')
+        )
+        .catch((error) => {
+            console.log(error);
+        });
 }
 
 app.listen(PORT);
