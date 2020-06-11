@@ -56,6 +56,10 @@
     </table>
     <div class="buttons-container">
         <button type="submit">Save</button>
-        <button type="button" onclick="window.location='/team/{{items.id}}/delete'">Delete</button>
+        {{#if items.name}}
+            <button type="button" onclick="window.location='/team/{{items.id}}/delete'">Delete</button>
+        {{else}}
+            <button type="button" onclick="window.location='/'">Cancel</button>
+        {{/if}}
     </div>
 </form>

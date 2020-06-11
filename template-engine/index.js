@@ -67,16 +67,34 @@ app.get('/team/add', (req, res) => {
 app.get('/team/:id/view', (req, res) => {
     const teams = JSON.parse(fs.readFileSync('./data/equipos.json'));
     const team = selectTeam(teams, req.params.id, false);
-    const coordinates = getCoordinates(team.address);
-    coordinates.then((data) => {
-        getMap(data.lat, data.lon).then((mapSrc) => {
-            res.render('team', {
-                layout: 'main',
-                title: team.name,
-                data: { id: req.params.id, team, mapSrc },
+    if (team.address != '') {
+        console.log(team.address);
+        const coordinates = getCoordinates(team.address);
+        coordinates
+            .then((data) => {
+                getMap(data.lat, data.lon).then((mapSrc) => {
+                    res.render('team', {
+                        layout: 'main',
+                        title: team.name,
+                        data: { id: req.params.id, team, mapSrc },
+                    });
+                });
+            })
+            .catch((err) => {
+                console.log('error');
+                res.send('error');
             });
+    } else {
+        res.render('team', {
+            layout: 'main',
+            title: team.name,
+            data: {
+                id: req.params.id,
+                team,
+                mapSrc: 'https://via.placeholder.com/300/09f/fff.png',
+            },
         });
-    });
+    }
 });
 
 app.get('/team/:id/delete', (req, res) => {
