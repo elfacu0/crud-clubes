@@ -162,7 +162,6 @@ function deleteTeam(id) {
 function getCoordinates(street) {
     street = encodeURI(street);
     const URL = `https://eu1.locationiq.com/v1/search.php?key=${process.env.LOCATIONIQ_API}&q=${street}&format=json`;
-    let coordinates = {};
     return axios
         .get(URL)
         .then((response) => response.data[0])
